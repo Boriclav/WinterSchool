@@ -1,4 +1,3 @@
-
 import sys,tty,termios, os
 class _Getch:
 	def __call__(self):
@@ -32,6 +31,8 @@ def get():
                 return('e')
 n = 10
 q = 1
+b = 0
+a = 0
 A = [[0,0,0,0,0,0,0,0,0,0],
 	[0,0,0,0,0,0,0,0,0,0],
 	[0,0,0,0,0,0,0,0,0,0],
@@ -50,6 +51,8 @@ if (x > 9) or (y > 9)  or (x < 0) or (y < 0):
 else:
 	A[y][x] = 1
 	os.system('clear')
+	A[y][x] = 1
+	A[b][a] = 0
 	for i in range (n):
 		for j in range (n):
 			if A[i][j] == 0:
@@ -87,6 +90,7 @@ else:
 					else:
 						print('x', end='')
 				print('\n', end= '')
+
 	
 	
 
